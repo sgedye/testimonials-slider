@@ -1,0 +1,148 @@
+:root {
+  --darkBlue: hsl(240, 38%, 20%);
+  --grayishBlue: hsl(240, 18%, 77%);
+  font-size: 32px;
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Image Wrapper */
+.imageWrapper {
+  background-image: url('../images/pattern-bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+}
+.image {
+  padding: 1rem 0;
+  width: 80%;
+}
+.arrows {
+  position: absolute;
+  bottom: 25px;
+  height: 30px;
+  width: 60px;
+  left: calc(50% - 30px);
+  background-color: white;
+  padding: 0 0.5rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -2px 2px 10px var(--grayishBlue);
+}
+.arrows > img {
+  height: 30px;
+  padding: 10px 12px;
+}
+
+/* Text Wrapper */
+.textWrapper {
+  color: darkblue;
+  color: var(--darkBlue);
+  position: relative;
+  text-align: center;
+  font-size: 50%;
+  padding: 0.5rem 0;
+}
+.quoteImage {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  left: calc(50% - 25px);
+}
+.quote {
+  margin-bottom: 0.5rem;
+  max-width: 750px;
+}
+.quoteJobTitle {
+  color: #999;
+  color: var(--grayishBlue);
+}
+.curveImage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  z-index: -1;
+}
+
+/* Attribution */
+.attribution {
+  position: absolute;
+  bottom: 10px ;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .testimonials-section {
+    flex-direction: row-reverse;
+    padding: 2rem;
+  }
+  .imageWrapper { width: 50%; }
+  .arrows {
+    bottom: 20px;
+    height: 40px;
+    width: 80px;
+    left: 22%;
+  }
+  .arrows > img {
+    height: 35px;
+    padding: 10px 15px;
+  }
+  .textWrapper {
+    width: 50%;
+    padding: 2rem 0 2rem 2rem;
+    font-size: 100%;
+    text-align: left;
+  }
+  .quoteImage {
+    left: 22%;
+    width: 100px;
+  }
+  .quote {
+    width: 125%;
+    margin-bottom: 1rem;
+  }
+  .quoteAuthor {
+    width: 125%;
+    font-size: 75%;
+  }
+  .quoteJobTitle {
+    display: inline;
+    font-size: 75%;
+  }
+  .curveImage {
+    width: 50%;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 10px ;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+  }
+}
